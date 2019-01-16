@@ -16,9 +16,9 @@ void call_gtest(){
     const char* arg="--gtest_output=xml:/googletest_result/result.xml";
     argv[1] = new char[strlen(arg)+1];
     strcpy(argv[1],arg);
-    printf("init googletest");
+    printf("init googletest\n");
     ::testing::InitGoogleTest( &argc, argv);
-    printf(" run googletest");
+    printf(" run googletest\n");
     int ret = RUN_ALL_TESTS();
-    printf(" end googletest");
+    printf(" end googletest %d\n",ret);
 }
